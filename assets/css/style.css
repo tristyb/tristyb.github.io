@@ -5,16 +5,16 @@
 @font-face {
 	font-style: normal;
 	font-weight: 300;
-	src: url('/assets/fonts/StackSansText-Light.woff2') format('woff2');
-	font-family: 'Stack Sans Text';
+	src: url("/assets/fonts/StackSansText-Light.woff2") format("woff2");
+	font-family: "Stack Sans Text";
 	font-display: swap;
 }
 
 @font-face {
 	font-style: normal;
 	font-weight: 700;
-	src: url('/assets/fonts/StackSansText-Bold.woff2') format('woff2');
-	font-family: 'Stack Sans Text';
+	src: url("/assets/fonts/StackSansText-Bold.woff2") format("woff2");
+	font-family: "Stack Sans Text";
 	font-display: swap;
 }
 
@@ -23,34 +23,36 @@
  * --------------------------------------------------------*/
 
 :root {
-  --font-size--2: clamp(0.64rem, 0.6012rem + 0.1939vw, 0.72rem);
-  --font-size--1: clamp(0.8rem, 0.7515rem + 0.2424vw, 0.9rem);
-  --font-size-0: clamp(1rem, 0.9394rem + 0.303vw, 1.125rem);
-  --font-size-1: clamp(1.25rem, 1.1742rem + 0.3788vw, 1.4063rem);
-  --font-size-2: clamp(1.5625rem, 1.4678rem + 0.4735vw, 1.7578rem);
-  --font-size-3: clamp(1.9531rem, 1.8348rem + 0.5919vw, 2.1973rem);
-  --font-size-4: clamp(2.4414rem, 2.2934rem + 0.7398vw, 2.7466rem);
-  --font-size-5: clamp(3.0518rem, 2.8668rem + 0.9248vw, 3.4332rem);
+	--font-size--2: clamp(0.64rem, 0.6012rem + 0.1939vw, 0.72rem);
+	--font-size--1: clamp(0.8rem, 0.7515rem + 0.2424vw, 0.9rem);
+	--font-size-0: clamp(1rem, 0.9394rem + 0.303vw, 1.125rem);
+	--font-size-1: clamp(1.25rem, 1.1742rem + 0.3788vw, 1.4063rem);
+	--font-size-2: clamp(1.5625rem, 1.4678rem + 0.4735vw, 1.7578rem);
+	--font-size-3: clamp(1.9531rem, 1.8348rem + 0.5919vw, 2.1973rem);
+	--font-size-4: clamp(2.4414rem, 2.2934rem + 0.7398vw, 2.7466rem);
+	--font-size-5: clamp(3.0518rem, 2.8668rem + 0.9248vw, 3.4332rem);
 
+	--space-4xs: clamp(0.125rem, 0.0947rem + 0.0758vw, 0.1563rem);
 	--space-3xs: clamp(0.25rem, 0.2197rem + 0.1515vw, 0.3125rem);
-  --space-2xs: clamp(0.5rem, 0.4697rem + 0.1515vw, 0.5625rem);
-  --space-xs: clamp(0.75rem, 0.6894rem + 0.303vw, 0.875rem);
-  --space-s: clamp(1rem, 0.9394rem + 0.303vw, 1.125rem);
-  --space-m: clamp(1.5rem, 1.4091rem + 0.4545vw, 1.6875rem);
-  --space-l: clamp(2rem, 1.8788rem + 0.6061vw, 2.25rem);
-  --space-xl: clamp(3rem, 2.8182rem + 0.9091vw, 3.375rem);
-  --space-2xl: clamp(4rem, 3.7576rem + 1.2121vw, 4.5rem);
-  --space-3xl: clamp(6rem, 5.6364rem + 1.8182vw, 6.75rem);
+	--space-2xs: clamp(0.5rem, 0.4697rem + 0.1515vw, 0.5625rem);
+	--space-xs: clamp(0.75rem, 0.6894rem + 0.303vw, 0.875rem);
+	--space-s: clamp(1rem, 0.9394rem + 0.303vw, 1.125rem);
+	--space-m: clamp(1.5rem, 1.4091rem + 0.4545vw, 1.6875rem);
+	--space-l: clamp(2rem, 1.8788rem + 0.6061vw, 2.25rem);
+	--space-xl: clamp(3rem, 2.8182rem + 0.9091vw, 3.375rem);
+	--space-2xl: clamp(4rem, 3.7576rem + 1.2121vw, 4.5rem);
+	--space-3xl: clamp(6rem, 5.6364rem + 1.8182vw, 6.75rem);
 
 	--brand: light-dark(deeppink, hotpink);
 	--color: light-dark(#000, #fff);
 	--bg-color: light-dark(#fff, #0f0f0f);
+	--border-color: light-dark(#666, #666);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
@@ -68,7 +70,7 @@ body {
 	font-weight: 300;
 	font-size: 1rem;
 	line-height: 1.5;
-	font-family: 'Stack Sans Text', sans-serif;
+	font-family: "Stack Sans Text", sans-serif;
 
 	@media (width < 500px) {
 		padding: var(--space-m) var(--space-m) var(--space-2xl);
@@ -81,7 +83,7 @@ body {
 
 :is(h1, h2, h3, h4, h5, h6) {
 	font-weight: 700;
-  text-wrap: balance;
+	text-wrap: balance;
 }
 
 ::selection {
@@ -94,16 +96,27 @@ body {
  * Header
  * --------------------------------------------------------*/
 
-.header {}
+.header {
+}
 
 .header__name {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	margin-block-end: var(--space-3xs);
+	align-items: flex-start;
+	margin-block-end: var(--space-2xs);
 	gap: var(--space-2xs) var(--space-xs);
 	font-size: var(--font-size-2);
 	line-height: 1.1;
+}
+
+.header__name-content {
+	display: flex;
+	gap: var(--space-4xs);
+	flex-direction: column;
+}
+
+.header__tagline {
+	font-size: var(--font-size-0);
 }
 
 .header__portrait {
@@ -133,16 +146,16 @@ body {
 .brief__item::before {
 	position: absolute;
 	inset-inline-start: -0.8em;
-	content: '\2022';
+	content: "\2022";
 }
 
 .brief__link {
 	color: var(--brand);
 	text-decoration-line: underline;
 	text-decoration-color: transparent;
-	text-decoration-thickness: .15em;
-	text-underline-offset: .25em;
-	transition: text-decoration-color .1s ease-out;
+	text-decoration-thickness: 0.15em;
+	text-underline-offset: 0.25em;
+	transition: text-decoration-color 0.1s ease-out;
 }
 
 .brief__link:is(:hover, :focus-visible) {
@@ -153,7 +166,8 @@ body {
  * CV Section
  * --------------------------------------------------------*/
 
-.cv-area {}
+.cv-area {
+}
 
 .cv-area + .cv-area {
 	margin-block-start: var(--space-xl);
@@ -167,7 +181,8 @@ body {
 	text-transform: uppercase;
 }
 
-.cv-area__item {}
+.cv-area__item {
+}
 
 .cv-area__text {
 	font-size: var(--font-size--1);
@@ -180,7 +195,8 @@ body {
  * Experience item
  * --------------------------------------------------------*/
 
-.exp {}
+.exp {
+}
 
 .exp + .exp {
 	margin-block-start: var(--space-m);
@@ -244,10 +260,27 @@ p.exp__item {
 
 li.exp__item {
 	display: list-item;
-	padding-inline-start: .5em;
+	padding-inline-start: 0.5em;
 	list-style-type: disc;
 }
 
 li.exp__item + li.exp__item {
 	margin-block-start: var(--space-2xs);
+}
+
+/* --------------------------------------------------------
+ * Key skills
+ * --------------------------------------------------------*/
+
+.cv-area__tags {
+	display: flex;
+	gap: var(--space-2xs);
+	flex-wrap: wrap;
+}
+
+.cv-area__tag {
+	font-size: var(--font-size--1);
+	padding: var(--space-2xs) var(--space-xs);
+	border: 0.0625em solid var(--border-color);
+	border-radius: 0.5em;
 }
