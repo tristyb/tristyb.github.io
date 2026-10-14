@@ -168,7 +168,11 @@ body {
 	text-transform: uppercase;
 }
 
-.cv-area__item {}
+.cv-area__item {
+	@media print {
+		break-inside: avoid;
+	}
+}
 
 .cv-area__text {
 	font-size: var(--font-size--1);
@@ -256,6 +260,12 @@ li.exp__item + li.exp__item {
 /* --------------------------------------------------------
  * Key skills
  * --------------------------------------------------------*/
+
+.cv-area--skills {
+	/* @media print {
+		break-inside: avoid;
+	} */
+}
 
 .cv-area__tags {
 	display: flex;
