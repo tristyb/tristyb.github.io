@@ -251,3 +251,20 @@ li.exp__item {
 li.exp__item + li.exp__item {
 	margin-block-start: var(--space-2xs);
 }
+
+/* --------------------------------------------------------
+ * Key skills
+ * --------------------------------------------------------*/
+
+.cv-area__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-2xs);
+}
+
+.cv-area__tag {
+	padding: var(--space-2xs) var(--space-xs);
+	border: 0.0625em solid var(--border-color);
+	border-radius: 0.5em;
+	font-size: var(--font-size--1);
+}
