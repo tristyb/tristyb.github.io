@@ -45,6 +45,7 @@
 	--brand: light-dark(deeppink, hotpink);
 	--color: light-dark(#000, #fff);
 	--bg-color: light-dark(#fff, #0f0f0f);
+	--border-color: light-dark(#666, #666);
 }
 
 *,
