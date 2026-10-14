@@ -131,6 +131,12 @@ body {
 	font-size: var(--font-size--1);
 }
 
+.brief__item:has(.brief__link) {
+	@media print {
+		display: none;
+	}
+}
+
 .brief__item::before {
 	position: absolute;
 	inset-inline-start: -0.8em;
@@ -261,11 +267,7 @@ li.exp__item + li.exp__item {
  * Key skills
  * --------------------------------------------------------*/
 
-.cv-area--skills {
-	/* @media print {
-		break-inside: avoid;
-	} */
-}
+.cv-area--skills {}
 
 .cv-area__tags {
 	display: flex;
@@ -278,4 +280,17 @@ li.exp__item + li.exp__item {
 	border: 0.0625em solid var(--border-color);
 	border-radius: 0.5em;
 	font-size: var(--font-size--1);
+}
+
+
+/* --------------------------------------------------------
+ * Links for printing
+ * --------------------------------------------------------*/
+
+.cv-area--links {
+	display: none;
+
+	@media print {
+		display: block;
+	}
 }
